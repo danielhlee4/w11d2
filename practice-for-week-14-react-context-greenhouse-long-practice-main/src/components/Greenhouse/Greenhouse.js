@@ -8,7 +8,7 @@ import ClimateStats from './ClimateStats';
 
 function Greenhouse() {
 
-  const {themeName, setThemeName} = useTheme();
+  const {themeName} = useTheme();
 
   const dayOrNight = () => {
     if (themeName === 'day') {
@@ -27,7 +27,7 @@ function Greenhouse() {
       <LightSwitch />
       <ClimateStats />
     </section>
-    
+
   );
 }
 
