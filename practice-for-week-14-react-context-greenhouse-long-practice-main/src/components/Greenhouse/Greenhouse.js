@@ -10,12 +10,18 @@ function Greenhouse() {
 
   const {themeName, setThemeName} = useTheme();
 
+  const dayOrNight = () => {
+    if (themeName === 'day') {
+      return dayImage;
+    } else if (themeName === 'night') {
+      return nightImage;
+    };
+  }
 
   return (
-
     <section>
       <img  className='greenhouse-img'
-            src={dayImage}
+            src={dayOrNight()}
             alt='greenhouse' 
       />
       <LightSwitch />
